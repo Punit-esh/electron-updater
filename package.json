@@ -1,0 +1,35 @@
+{
+  "name": "electron-updater",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "electron": "^37.2.0",
+    "electron-updater": "^6.6.2"
+  },
+  "devDependencies": {
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.example.electronupdaterdemo",
+    "publish": [
+      {
+        "provider": "generic",
+        "url": "https://your-update-server.com/"
+      }
+    ],
+    "win": {
+      "target": "nsis"
+    }
+  }
+}
